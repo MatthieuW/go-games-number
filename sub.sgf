@@ -1,0 +1,51 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]KM[0.00]
+PW[Blanc]PB[Noir]AW[kj][lj][mj][nj][oj][pj][qj][rj][sj][ak][bk][ck][dk][ek][fk][gk][hk][ik][jk][kk][nk][rk][dl][il][ml][pl][bm][dm][fm][hm][km][nm][qm][cn][jn][mn][pn][fo][po][ro][cp][fp][hp][jp][mp][gq][qq][br][er][hr][jr][or]TR[lk][mk][nk][ok][pk][qk][rk][sk][al][bl][cl][dl][el][fl][gl][hl][il][jl][kl][ll][sl][am][sm][an][sn][ao][so][ap][sp][aq][sq][ar][sr][as][bs][cs][ds][es][fs][gs][hs][is][js][ks][ls][ms][ns][os][ps][qs][rs][ss]SQ[ij][jj][kj]C[So we are at the begining on Wk step b control.]
+;B[aj]
+;AB[ca][ga][ia][bb][fb][ib][cc][hc][ic][ad][ed][gd][id][be][ce][de][fe][ie][cf][df][ff][jf][ag][bg][cg][dg][eg][fg][gg][hg][ig][jg][ii][ji][ki][li][mi][ni][oi][pi][qi][ri][si][bj][cj][dj][ej][fj][gj][hj]TR[aa][ba][ca][da][ea][fa][ga][ha][ab][hb][ac][hc][ad][hd][ae][he][af][bf][cf][df][ef][ff][gf][hf][if]SQ[jc][jd][je]C[During the setup "SW k" subcontrol, we encode number "B k,1" in triangles area (49 triangles for 19x19 board).
+
+]
+;W[]
+;B[je]
+;W[ah]
+;CR[lh][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]AW[ja][pa][jb][kb][mb][ob][pb][rb][sb][kc][nc][oc][pc][rc][kd][md][qd][ke][ne][pe][re][kf][lf][of][pf][rf][kg][lg][mg][ng][og][pg][qg][rg][sg][bh][ch][dh][eh][fh][gh][hh][ih][jh][kh]TR[ka][la][ma][na][oa][pa][qa][ra][sa][lb][sb][lc][sc][ld][sd][le][se][lf][mf][nf][of][pf][qf][rf][sf]SQ[jc][jd][je]C[During B k,1 step b sub-control, we encode W k, 1 in white stones.
+
+For now we avoid using area marked with circle.]
+;B[jd]SQ[jc][jd][je]C[We enter W k, 1 step a sub-control. ]
+;W[]
+;B[aa]
+;AB[ba][da][ea][fa][ha][ab][cb][db][eb][gb][hb][ac][bc][dc][ec][fc][gc][bd][cd][dd][fd][hd][ae][ee][ge][he][af][bf][ef][gf][hf][if]C[While in "W k,1 step a" subcontrol we fill the black side.]
+;W[jc]C[We enter "W k,1 step b" subcontrol. 
+ ]
+;B[ia]
+;AB[db][ib][bc][ic][bd][ed][gd][id][be][ee][ie][jf][ag][bg][cg][dg][eg][fg][gg][hg][ig][jg]SQ[jc][jd][je]C[While in "W k,1 step b" subcontrol, we encode B k,2 number.  ]
+(;W[jd]
+;AW[ka][la][ma][na][oa][qa][ra][sa][lb][nb][qb][lc][mc][qc][sc][ld][nd][od][pd][rd][sd][le][me][oe][qe][se][mf][nf][qf][sf][lh][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]SQ[jc][jd][je]C[During "B k,2 step a" control we fill the upper right area with stones so they can be taken and the cycle can go on.
+]
+;B[je]SQ[jc][jd][je]C["B k,2 step b" control starts, and cycle goes on.])
+(;W[]SQ[jc][jd][je]
+;AE[pa][db][ob][pb][bc][nc][oc][bd][qd][ee][pe][re][pf][rf]AW[la][nb][pd][rd]AB[ca][ga][bb][fb][cc][hc][ad][ce][de][fe][cf][df][ff]SQ[jc][jd][je]C[Let's say we are near the end of sub-scheme, with contre W k,i   i=2^49
+We encode B k, 1 number again, as it never add is "step a"]
+;B[]
+;W[jd]SQ[jc][jd][je]C[So we now are in B k,1 step a]
+;B[]
+;W[je]SQ[jc][jd][je]C[With three white stones in square marked area, this code is for "clean up" phase, opposite of the control.
+]
+;B[ba]
+;CR[lh][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]AW[ka][ma][na][oa][pa][qa][ra][sa][lb][ob][pb][qb][lc][mc][nc][oc][qc][sc][ld][nd][od][qd][sd][le][me][oe][pe][qe][re][se][mf][nf][pf][qf][rf][sf]AB[aa][da][ea][fa][ha][ab][cb][db][eb][gb][hb][ac][bc][dc][ec][fc][gc][bd][cd][dd][fd][hd][ae][ee][ge][he][af][bf][ef][gf][hf]SQ[jc][jd][je]C[We fill black and white sides, take black, then start filling everything.]
+;W[if]
+;CR[lh][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]AW[aa][ba][ca][da][ea][fa][ga][ha][ia][ab][bb][cb][db][eb][fb][gb][hb][ib][ac][bc][cc][dc][ec][fc][gc][hc][ic][ad][bd][cd][dd][ed][fd][gd][hd][id][ae][be][ce][de][ee][fe][ge][he][ie][af][bf][cf][df][ef][ff][gf][hf][jf][ag][bg][cg][dg][eg][fg][gg][hg][ig][jg][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]SQ[jc][jd][je]C[Then we fill all the upper side of the board except one place marked with circle]
+;B[lh]C[Capture, and everything is ready for starting encoding B k+1 number in main scheme. 
+As long as M12 stone is needed of course, that is in half the case. 
+
+However, we can repeat the sub-scheme at that point, as there is a black stone in one of the place marked with circle, it ensures we will not repeat an already played position. ]
+;W[]
+;B[oh]
+;CR[lh][mh][nh][oh][ph][qh][rh][sh][ai][bi][ci][di][ei][fi][gi][hi]AW[ja][jb][kb][kc][kd][ke][kf][kg][lg][mg][ng][og][pg][qg][rg][sg][ah][bh][ch][dh][eh][fh][gh][hh][ih][jh][kh]AB[aa][ca][ga][ia][ab][fb][gb][ib][cc][ec][ic][cd][dd][id][be][de][fe][ge][ie][ef][jf][ag][bg][cg][dg][eg][fg][gg][hg][ig][jg][rh][sh][bi][ei]SQ[jc][jd][je]C[for each stones in circle area needed to encode Bk+1, we can repeat the whole sub-scheme. As there is an additional black stone played there, it ensures we will not repeat an already played position]
+;W[]
+;B[la]
+(;W[lb])
+(;CR[ka][lf][mf][nf][of]AW[qa][qb][qc][qd][qe][re][se]AB[oa][pa][lb][ob][lc][oc][ld][od][le][me][ne][oe][pe][pf][qf][rf][sf]TR[ma][na][ra][sa][mb][nb][rb][sb][mc][nc][rc][sc][md][nd][rd][sd]SQ[pb][pc][pd]C[We have enough room in the corner to play a sub-sub-scheme.
+]
+;W[]TR[ma][na][oa][mb][nb][mc][nc][md][nd]SQ[le][oe][pe][pf][qf][rf][sf]
+;CR[kb][lf][of]AW[ra][sc][pd][lf][of]AB[ka][rb][sb][rd][mf][nf]TR[ma][na][oa][mb][nb][mc][nc][md][nd]SQ[ka][le][oe][pe][mf][nf][pf][qf][rf][sf])))
