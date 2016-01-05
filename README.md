@@ -1,5 +1,5 @@
-The number of go games is greater than a googolplex
----------------------------------------------------
+A googolplex of go games
+------------------------
 
 Article is here: http://matthieuw.github.io/go-games-number/GoGamesNumber.pdf
 
