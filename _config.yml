@@ -1,0 +1,8 @@
+title: Go-games-number
+description: The number of go games is greater than a googolplex
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-leap-day
+
+gems:
+  - jekyll-mentions
