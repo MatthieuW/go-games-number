@@ -1,7 +1,8 @@
 A googolplex of go games
 ------------------------
 
-Article is here: http://matthieuw.github.io/go-games-number/GoGamesNumber.pdf
+Article is here: https://matthieuw.github.io/go-games-number/AGoogolplexOfGoGames.pdf
+older version https://matthieuw.github.io/go-games-number/GoGamesNumber.pdf
 
 SGF files
  - main9x9a.sgf
